@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimator.SetBool("Walk", false);
         _direction = Vector2.zero;
-        _playerRb.velocity = Vector2.zero;
+        _playerRb.velocity = new Vector2(0,_playerRb.velocity.y);
 
     }
 
