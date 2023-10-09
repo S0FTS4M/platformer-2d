@@ -52,6 +52,12 @@ public class PlayerController : MonoBehaviour
             _playerRb.AddForce(_direction * speed);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var collectable = collision.gameObject.GetComponent<ICollectable>();
+        collectable?.Collect();
+    }
+
     #endregion
 
 
