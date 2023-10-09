@@ -75,8 +75,8 @@ public class PlayerController : MonoBehaviour
 
     private void Jump_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        Physics2D.OverlapCircleNonAlloc(jumpCheckTransform.position, jumpCheckRadius, colliders, jumpLayerMask);
-        if (colliders != null && colliders.Length > 0)
+        int count = Physics2D.OverlapCircleNonAlloc(jumpCheckTransform.position, jumpCheckRadius, colliders, jumpLayerMask);
+        if (count > 0)
         {
             _playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
