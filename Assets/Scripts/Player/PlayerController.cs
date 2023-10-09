@@ -93,6 +93,24 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawSphere(jumpCheckTransform.position, jumpCheckRadius);
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        var movingBlock = collision.collider.GetComponent<MovingBlock>();
+        if (movingBlock)
+        {
+            transform.SetParent(movingBlock.transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        var movingBlock = collision.collider.GetComponent<MovingBlock>();
+        if (movingBlock)
+        {
+            transform.SetParent(null);
+        }
+    }
+
 
     #endregion
 }
