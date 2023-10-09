@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     #region Variables
 
+    private Collider2D[] colliders = new Collider2D[3];
+
     private Vector2 _direction;
 
     private Rigidbody2D _playerRb;
@@ -73,8 +75,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        var colliders = Physics2D.OverlapCircleAll(jumpCheckTransform.position, jumpCheckRadius, jumpLayerMask);
-
+        Physics2D.OverlapCircleNonAlloc(jumpCheckTransform.position, jumpCheckRadius, colliders, jumpLayerMask);
         if (colliders != null && colliders.Length > 0)
         {
             _playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
