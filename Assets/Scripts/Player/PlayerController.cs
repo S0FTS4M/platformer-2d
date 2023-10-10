@@ -7,9 +7,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region SerializedFields
-    [SerializeField] Animator playerAnimator;
 
-    [SerializeField] Transform jumpCheckTransform;
+    [SerializeField] private Animator playerAnimator;
+
+    [SerializeField] private Transform jumpCheckTransform;
 
     [SerializeField] private float speed;
 
@@ -17,11 +18,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField, Range(0f, 1f)] private float jumpCheckRadius;
 
-    [SerializeField] LayerMask jumpLayerMask;
+    [SerializeField] private LayerMask jumpLayerMask;
+
+    [SerializeField, Range(1,100)] private  float fallingSpeed = 30f;
 
     #endregion
 
+
     #region Variables
+
+    private const float maxFallSpeed = 30f;
 
     private Collider2D[] colliders = new Collider2D[3];
 
@@ -70,8 +76,11 @@ public class PlayerController : MonoBehaviour
         var velY = _playerRb.velocity.y;
         if (_isGrounded == false && velY < 0)
         {
-            velY -= Time.deltaTime * 30f;
+            velY -= Time.deltaTime * fallingSpeed;
+
+            velY = Mathf.Clamp(velY, -maxFallSpeed, 0);
             _playerRb.velocity = new Vector2(_playerRb.velocity.x, velY);
+
         }
     }
 
