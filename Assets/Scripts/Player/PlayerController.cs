@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
         Handles.Label(transform.position, $"walk:{_isWalking} ground:{_isGrounded}");
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         var movingBlock = collision.collider.GetComponent<MovingBlock>();
         if (movingBlock)
