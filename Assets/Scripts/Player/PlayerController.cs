@@ -54,8 +54,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var collectable = collision.gameObject.GetComponent<ICollectable>();
-        collectable?.Collect();
+        var interactable = collision.gameObject.GetComponent<IInteractable>();
+        interactable?.Interact(gameObject);
     }
 
     #endregion

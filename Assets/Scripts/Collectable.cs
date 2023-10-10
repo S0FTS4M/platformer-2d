@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class Collectable : MonoBehaviour,ICollectable
+public class Collectable : MonoBehaviour,IInteractable
 {
-    public void Collect()
+    public void Interact(GameObject interactor)
     {
+        //TODO: gain points or somethign like that
         Debug.Log("collected");
         Destroy(gameObject);
     }
