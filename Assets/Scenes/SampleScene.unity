@@ -1531,6 +1531,7 @@ MonoBehaviour:
   jumpLayerMask:
     serializedVersion: 2
     m_Bits: 55
+  fallingSpeed: 30
 --- !u!70 &1245356904
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
