@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
 
         CheckGrounded();
 
+        FallFaster();
+
         if (_isGrounded && _isWalking == false)
         {
             _direction = Vector2.zero;
@@ -63,6 +65,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FallFaster()
+    {
+        var velY = _playerRb.velocity.y;
+        if (_isGrounded == false && velY < 0)
+        {
+            velY -= Time.deltaTime * 30f;
+            _playerRb.velocity = new Vector2(_playerRb.velocity.x, velY);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
