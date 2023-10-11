@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private LayerMask jumpLayerMask;
 
-    [SerializeField, Range(1,100)] private  float fallingSpeed = 30f;
+    [SerializeField, Range(1, 100)] private float fallingSpeed = 30f;
 
     #endregion
 
@@ -149,12 +148,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(jumpCheckTransform.position, jumpCheckRadius);
-        Handles.Label(transform.position, $"walk:{_isWalking} ground:{_isGrounded}");
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var movingBlock = collision.collider.GetComponent<MovingBlock>();
@@ -174,6 +167,13 @@ public class PlayerController : MonoBehaviour
     }
 
 
+#if UNITY_EDITOR
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(jumpCheckTransform.position, jumpCheckRadius);
+        Handles.Label(transform.position, $"walk:{_isWalking} ground:{_isGrounded}");
+    }
+#endif
 
     #endregion
 }
