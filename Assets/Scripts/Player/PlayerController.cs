@@ -3,7 +3,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IInventoryHolder
 {
     #region SerializedFields
 
@@ -35,6 +35,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _playerRb;
     private bool _isGrounded;
     private bool _isWalking;
+
+    #endregion
+
+    #region Props
+
+    public Inventory Inventory { get; private set; } = new();
 
     #endregion
 

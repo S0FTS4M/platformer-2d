@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour,IInteractable
 {
     [SerializeField]
     private ItemData data;
@@ -11,4 +9,18 @@ public class Item : MonoBehaviour
     {
         this.data = data;
     }
+
+    public void Interact(GameObject interactor)
+    {
+        var inventoryHolder = interactor.GetComponent<IInventoryHolder>();
+        if (inventoryHolder != null)
+        {
+            inventoryHolder.Inventory.Add(data);
+        }
+
+        //TODO: use pooling instead if we are gonna instantiate items in runtime
+        Destroy(gameObject);
+    }
+
+
 }
