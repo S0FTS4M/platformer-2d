@@ -166,7 +166,8 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
     private void OnCollisionExit2D(Collision2D collision)
     {
         var movingBlock = collision.collider.GetComponent<MovingBlock>();
-        if (movingBlock)
+
+        if (movingBlock && movingBlock.gameObject.activeInHierarchy)
         {
             transform.SetParent(null);
         }
