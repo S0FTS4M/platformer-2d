@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDiamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -277,6 +281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDiamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -343,6 +351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDiamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -408,6 +420,10 @@ PrefabInstance:
     - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_Name
       value: BlueDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
@@ -628,6 +644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDiamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -693,6 +713,10 @@ PrefabInstance:
     - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_Name
       value: BlueDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
@@ -842,6 +866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDiamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -907,6 +935,10 @@ PrefabInstance:
     - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_Name
       value: BlueDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
@@ -974,6 +1006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDiamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1040,6 +1076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDiamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1105,6 +1145,10 @@ PrefabInstance:
     - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_Name
       value: BlueDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
@@ -1233,6 +1277,10 @@ PrefabInstance:
       value: BlueVariant
       objectReference: {fileID: 0}
     - target: {fileID: 4900403571356462306, guid: 267cfdf4c8387234ab7d3835e3b48230, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900403571356462306, guid: 267cfdf4c8387234ab7d3835e3b48230, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1257,6 +1305,10 @@ PrefabInstance:
     - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_Name
       value: BlueDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
@@ -1323,6 +1375,10 @@ PrefabInstance:
     - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_Name
       value: BlueDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
@@ -1529,13 +1585,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 1245356902}
   jumpCheckTransform: {fileID: 96785768}
-  speed: 200
+  speed: 300
   jumpForce: 10
   jumpCheckRadius: 0.124
   jumpLayerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 128
   fallingSpeed: 30
+  maxSpeed: 5
+  MaxFallSpeed: 30
+  overlapBoxsize: {x: 1.1, y: 0.2}
 --- !u!70 &1245356904
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1583,7 +1642,7 @@ GameObject:
   - component: {fileID: 1310521926}
   - component: {fileID: 1310521925}
   - component: {fileID: 1310521927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5538,6 +5597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDiamond
       objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5666,6 +5729,10 @@ PrefabInstance:
       value: RedVariant
       objectReference: {fileID: 0}
     - target: {fileID: 4900403571356462306, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900403571356462306, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -5726,6 +5793,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5891074021422887562, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343251681034734626, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925412756579108854, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7794412059364206756, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
       propertyPath: blockCount
       value: 4
@@ -5759,6 +5838,10 @@ PrefabInstance:
     - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_Name
       value: BlueDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
@@ -5825,6 +5908,10 @@ PrefabInstance:
     - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_Name
       value: BlueDiamond
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021577236692841951, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8258401224803199817, guid: 543173912d9385044ba3a8bdd2102484, type: 3}
       propertyPath: m_RootOrder
@@ -5932,6 +6019,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5891074021422887562, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343251681034734626, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925412756579108854, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7794412059364206756, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
       propertyPath: blockCount
       value: 4
@@ -5947,6 +6046,10 @@ PrefabInstance:
     - target: {fileID: 8339598635018871726, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
       propertyPath: m_Name
       value: MovingBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339598635018871726, guid: 097f95d59a7e51145ae34cfe322a2969, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

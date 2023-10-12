@@ -6,27 +6,37 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour, IInventoryHolder
 {
     #region SerializedFields
-
+    [Header("Components")]
     [SerializeField] private Animator playerAnimator;
 
     [SerializeField] private Transform jumpCheckTransform;
 
+    [Header("Character Settings")]
     [SerializeField] private float speed;
 
     [SerializeField] private float jumpForce;
+
+    [SerializeField, Range(1, 100)] private float fallingSpeed = 30f;
+
+    [SerializeField, Range(0f, 10f)] private float maxSpeed = 5f;
+
+    [SerializeField, Range(1f, 100f)] private float MaxFallSpeed = 30f;
 
     [SerializeField, Range(0f, 1f)] private float jumpCheckRadius;
 
     [SerializeField] private LayerMask jumpLayerMask;
 
-    [SerializeField, Range(1, 100)] private float fallingSpeed = 30f;
+
+    [Header("Overlap Box")]
+
+    [SerializeField] private Vector2 overlapBoxsize = Vector2.zero;
+
+    [SerializeField] private Vector3 overlapBoxOffset;
 
     #endregion
 
 
     #region Variables
-
-    private const float maxFallSpeed = 30f;
 
     private Collider2D[] colliders = new Collider2D[3];
 
@@ -83,7 +93,7 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
         {
             velY -= Time.deltaTime * fallingSpeed;
 
-            velY = Mathf.Clamp(velY, -maxFallSpeed, 0);
+            velY = Mathf.Clamp(velY, -MaxFallSpeed, 0);
             _playerRb.velocity = new Vector2(_playerRb.velocity.x, velY);
 
         }
@@ -101,10 +111,20 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
 
     private void Move()
     {
-        _playerRb.AddForce(_direction * speed);
+        _playerRb.velocity =
+            new Vector2(Vector2.ClampMagnitude(_direction * speed, maxSpeed).x, _playerRb.velocity.y);
 
-        var velX = Mathf.Clamp(_playerRb.velocity.x, -3, 3);
-        _playerRb.velocity = new Vector2(velX, _playerRb.velocity.y);
+        // Check for collisions in the direction of movement
+        var colliders = Physics2D.OverlapBoxAll(transform.position + overlapBoxOffset, overlapBoxsize, 0, jumpLayerMask);
+
+        if (colliders.Length > 0 && _isGrounded == false && _playerRb.velocity.y < 0)
+        {
+            _playerRb.velocity = new Vector2(0f, _playerRb.velocity.y);
+
+            _direction = Vector2.zero;
+            playerAnimator.SetBool("Walk", false);
+            _isWalking = false;
+        }
     }
 
     private void CheckGrounded()
@@ -177,8 +197,10 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(jumpCheckTransform.position, jumpCheckRadius);
+        Gizmos.DrawWireSphere(jumpCheckTransform.position, jumpCheckRadius);
         Handles.Label(transform.position, $"walk:{_isWalking} ground:{_isGrounded}");
+
+        Gizmos.DrawWireCube(transform.position + overlapBoxOffset, overlapBoxsize);
     }
 #endif
 
