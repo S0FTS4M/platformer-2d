@@ -10,17 +10,18 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
     [SerializeField] private Animator playerAnimator;
 
     [SerializeField] private Transform jumpCheckTransform;
+    [SerializeField] private Transform boxOverlapTransform;
 
     [Header("Character Settings")]
     [SerializeField] private float speed;
 
     [SerializeField] private float jumpForce;
 
-    [SerializeField, Range(1, 100)] private float fallingSpeed = 30f;
+    [SerializeField, Range(1, 100)] private float fallingSpeed;
 
-    [SerializeField, Range(0f, 10f)] private float maxSpeed = 5f;
+    [SerializeField, Range(0f, 10f)] private float maxSpeed;
 
-    [SerializeField, Range(1f, 100f)] private float MaxFallSpeed = 30f;
+    [SerializeField, Range(1f, 100f)] private float MaxFallSpeed;
 
     [SerializeField, Range(0f, 1f)] private float jumpCheckRadius;
 
@@ -115,15 +116,14 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
             new Vector2(Vector2.ClampMagnitude(_direction * speed, maxSpeed).x, _playerRb.velocity.y);
 
         // Check for collisions in the direction of movement
-        var colliders = Physics2D.OverlapBoxAll(transform.position + overlapBoxOffset, overlapBoxsize, 0, jumpLayerMask);
+        var colliders = Physics2D.OverlapBoxAll(boxOverlapTransform.position + overlapBoxOffset, overlapBoxsize, 0, jumpLayerMask);
 
-        if (colliders.Length > 0 && _isGrounded == false && _playerRb.velocity.y < 0)
+        if (colliders.Length > 0 && _isWalking == false && _playerRb.velocity.y < 0)
         {
             _playerRb.velocity = new Vector2(0f, _playerRb.velocity.y);
 
             _direction = Vector2.zero;
             playerAnimator.SetBool("Walk", false);
-            _isWalking = false;
         }
     }
 
@@ -200,7 +200,7 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
         Gizmos.DrawWireSphere(jumpCheckTransform.position, jumpCheckRadius);
         Handles.Label(transform.position, $"walk:{_isWalking} ground:{_isGrounded}");
 
-        Gizmos.DrawWireCube(transform.position + overlapBoxOffset, overlapBoxsize);
+        Gizmos.DrawWireCube(boxOverlapTransform.position + overlapBoxOffset, overlapBoxsize);
     }
 #endif
 
