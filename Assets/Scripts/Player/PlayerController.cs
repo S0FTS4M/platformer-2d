@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
 
     [SerializeField] private Vector3 overlapBoxOffset;
 
+    [SerializeField] private InventoryObject inventory;
+
     #endregion
 
 
@@ -47,11 +49,12 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
     private bool _isGrounded;
     private bool _isWalking;
 
+    public InventoryObject Inventory { get { return inventory; } }
+
     #endregion
 
     #region Props
 
-    public Inventory Inventory { get; private set; } = new();
 
     #endregion
 
@@ -102,8 +105,13 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var interactable = collision.gameObject.GetComponent<IInteractable>();
-        interactable?.Interact(gameObject);
+        var item = collision.gameObject.GetComponent<IInteractable>();
+        item?.Interact(gameObject);
+    }
+
+    private void OnApplicationQuit()
+    {
+        Inventory.Container.Clear();
     }
 
     #endregion

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IInventoryHolder
 {
-    Inventory Inventory { get; }
+    InventoryObject Inventory { get; }
 }

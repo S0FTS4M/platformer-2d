@@ -1,26 +1,17 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour,IInteractable
+public class Item : MonoBehaviour, IInteractable
 {
     [SerializeField]
-    private ItemData data;
-
-    public void SetItem(ItemData data)
-    {
-        this.data = data;
-    }
+    public ItemObject itemObject;
 
     public void Interact(GameObject interactor)
     {
         var inventoryHolder = interactor.GetComponent<IInventoryHolder>();
         if (inventoryHolder != null)
         {
-            inventoryHolder.Inventory.Add(data);
+            inventoryHolder.Inventory.AddItem(itemObject, 1);
+            Destroy(gameObject);
         }
-
-        //TODO: use pooling instead if we are gonna instantiate items in runtime
-        Destroy(gameObject);
     }
-
-
 }

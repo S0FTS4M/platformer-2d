@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2233015766699246125}
   - component: {fileID: 3152476087689987002}
   m_Layer: 0
-  m_Name: BlueDiamond
+  m_Name: OrangeDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 345393837, guid: 34f29f8a8959bec43a8c851c4f2f90aa, type: 3}
+  m_Sprite: {fileID: -990169718, guid: 34f29f8a8959bec43a8c851c4f2f90aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300a139eddc74954aa13c64cb19c5db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemObject: {fileID: 11400000, guid: 76fc5070c2c1a474296badb621124129, type: 2}
+  itemObject: {fileID: 11400000, guid: 0bc9158c5da3e394ebf0ae5cedd5bd6e, type: 2}
