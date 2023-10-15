@@ -1322,7 +1322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4900403571356462306, guid: 267cfdf4c8387234ab7d3835e3b48230, type: 3}
       propertyPath: m_Name
-      value: BlueVariant
+      value: BlueTrap
       objectReference: {fileID: 0}
     - target: {fileID: 4900403571356462306, guid: 267cfdf4c8387234ab7d3835e3b48230, type: 3}
       propertyPath: m_Layer
@@ -5722,7 +5722,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 910707173218151206, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: speed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 910707173218151206, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: blockCount
@@ -5778,7 +5778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4900403571356462306, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: m_Name
-      value: RedVariant
+      value: RedTrap
       objectReference: {fileID: 0}
     - target: {fileID: 4900403571356462306, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: m_Layer
