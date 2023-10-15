@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour, IInventoryHolder
 
     private void OnApplicationQuit()
     {
-        Inventory.Container.Clear();
+        Inventory.Slots.Clear();
     }
 
     #endregion

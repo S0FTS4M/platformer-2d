@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 86789154}
   - component: {fileID: 86789158}
-  - component: {fileID: 86789157}
   - component: {fileID: 86789156}
+  - component: {fileID: 86789157}
   - component: {fileID: 86789155}
   m_Layer: 5
   m_Name: Inventory
@@ -161,7 +161,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 131.1471, y: 409.0627}
+  m_SizeDelta: {x: 99.9794, y: 409.0627}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &86789155
 MonoBehaviour:
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1c03970f3d6ee4eb852b321064476c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryDisplayContainerPrefab: {fileID: 6948303913248653224, guid: c5760ef3e3b829d448e8d9b2346d051b, type: 3}
   inventory: {fileID: 11400000, guid: 2e6ef3b419d3ed54dbe11002b9478901, type: 2}
 --- !u!114 &86789157
 MonoBehaviour:

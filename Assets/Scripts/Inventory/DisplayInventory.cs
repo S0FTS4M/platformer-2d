@@ -7,37 +7,53 @@ using static UnityEditor.Progress;
 
 public class DisplayInventory : MonoBehaviour
 {
+    [SerializeField]
+    private InventoryDisplayContainer inventoryDisplayContainerPrefab;
+
     public InventoryObject inventory;
 
-    Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
- 
+    private Dictionary<InventorySlot, InventoryDisplayContainer> _itemsDisplayed = new();
+
+    private Dictionary<string,Sprite> tileDict = new();
+
     void Start()
     {
+        InitSprites();
         InitDisplay();
+    }
+
+    private void InitSprites()
+    {
+        var tiles = Resources.LoadAll<Sprite>("Images/tiles");
+        foreach (var tile in tiles)
+        {
+            tileDict.Add(tile.name, tile);
+        }
     }
 
     public void InitDisplay()
     {
-        foreach (var item in inventory.Container)
+        foreach (var inventorySlot in inventory.Slots)
         {
-            var obj = InstantiateItem(item);
-            itemsDisplayed.Add(item, obj);
+            var inventoryDisplayContainer = CreateContainer(inventorySlot);
+            _itemsDisplayed.Add(inventorySlot, inventoryDisplayContainer);
         }
     }
     public void UpdateDisplay(InventorySlot inventorySlot)
     {
-        itemsDisplayed[inventorySlot].GetComponentInChildren<TextMeshProUGUI>().text = inventorySlot.amount.ToString();
+        _itemsDisplayed[inventorySlot].GetComponentInChildren<TextMeshProUGUI>().text = inventorySlot.amount.ToString();
     }
     public void CreateDisplay(InventorySlot inventorySlot)
     {
-        var obj = InstantiateItem(inventorySlot);
-        itemsDisplayed.Add(inventorySlot, obj);
+        var inventoryDisplayContainer = CreateContainer(inventorySlot);
+        _itemsDisplayed.Add(inventorySlot, inventoryDisplayContainer);
     }
-    GameObject InstantiateItem(InventorySlot item) 
+    InventoryDisplayContainer CreateContainer(InventorySlot inventorySlot)
     {
-        var obj = Instantiate(item.item.prefab, Vector3.zero, Quaternion.identity, transform);
-        obj.GetComponentInChildren<TextMeshProUGUI>().text = item.amount.ToString();
-        return obj;
+        var inventoryDisplayContainer = Instantiate(inventoryDisplayContainerPrefab, transform);
+        inventoryDisplayContainer.amountText.SetText(inventorySlot.amount.ToString());
+        inventoryDisplayContainer.icon.sprite = tileDict[inventorySlot.item.type.ToString()];
+        return inventoryDisplayContainer;
     }
 
     public void OnEnable()

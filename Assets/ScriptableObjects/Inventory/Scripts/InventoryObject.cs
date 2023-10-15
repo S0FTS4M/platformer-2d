@@ -7,7 +7,7 @@ using static UnityEditor.Progress;
 [CreateAssetMenu(fileName ="NewInventory", menuName ="InventorySystem/Inventory")]
 public class InventoryObject : ScriptableObject
 {
-    public List<InventorySlot> Container = new List<InventorySlot>();
+    public List<InventorySlot> Slots = new List<InventorySlot>();
 
     public delegate void ItemDelegate(InventorySlot item);
     public event ItemDelegate ItemAdded;
@@ -15,7 +15,7 @@ public class InventoryObject : ScriptableObject
     public event ItemDelegate ItemUpdated;
     public void AddItem(ItemObject _item, int _amount)
     {
-        foreach (var inventorySlot in Container)
+        foreach (var inventorySlot in Slots)
         {
             if (inventorySlot.item == _item) 
             {
@@ -25,7 +25,7 @@ public class InventoryObject : ScriptableObject
             }
         }
         var newSlot = new InventorySlot(_item, _amount);
-        Container.Add(newSlot);
+        Slots.Add(newSlot);
         ItemAdded?.Invoke(newSlot);
     }
 }

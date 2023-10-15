@@ -1039,7 +1039,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformPack_tilesheet@2_43
+      name: BlueDiamond
       rect:
         serializedVersion: 2
         x: 896
@@ -1060,7 +1060,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformPack_tilesheet@2_44
+      name: YellowDiamond
       rect:
         serializedVersion: 2
         x: 1024
@@ -1081,7 +1081,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformPack_tilesheet@2_45
+      name: GreenDiamond
       rect:
         serializedVersion: 2
         x: 1152
@@ -1102,7 +1102,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platformPack_tilesheet@2_46
+      name: OrangeDiamond
       rect:
         serializedVersion: 2
         x: 1280
@@ -1889,6 +1889,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BlueDiamond: 345393837
+      GreenDiamond: 800000347
+      OrangeDiamond: -990169718
+      YellowDiamond: -406030726
       blue_blocker: 1517392319
       green_blocker: 1425382871
       platformPack_tilesheet@2_0: -1879924514
@@ -1925,10 +1929,6 @@ TextureImporter:
       platformPack_tilesheet@2_40: 1083834988
       platformPack_tilesheet@2_41: 1331722963
       platformPack_tilesheet@2_42: -1581261390
-      platformPack_tilesheet@2_43: 345393837
-      platformPack_tilesheet@2_44: -406030726
-      platformPack_tilesheet@2_45: 800000347
-      platformPack_tilesheet@2_46: -990169718
       platformPack_tilesheet@2_47: -1422239287
       platformPack_tilesheet@2_48: 672526632
       platformPack_tilesheet@2_49: -2033807797
