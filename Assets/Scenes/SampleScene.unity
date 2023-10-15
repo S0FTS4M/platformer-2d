@@ -1330,7 +1330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4900403571356462306, guid: 267cfdf4c8387234ab7d3835e3b48230, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5726,11 +5726,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 910707173218151206, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: blockCount
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 910707173218151206, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: direction.y
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2727068668792984147, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: m_RootOrder
@@ -5742,7 +5742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2727068668792984147, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2727068668792984147, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5786,7 +5786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4900403571356462306, guid: 5b3d190a94ec0de498a790b39cb1674f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
